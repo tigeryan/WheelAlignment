@@ -15,6 +15,8 @@
 		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
+		71A9645DD10B46178FC0105A /* CDVGyroscope.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B77B1B46984B518E5E1A3F /* CDVGyroscope.m */; };
+		191ABE2622744654AD4CCC35 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7018EA16E49A419CB363EFC9 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "WheelAlignment/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		E3B77B1B46984B518E5E1A3F /* CDVGyroscope.m */ = {isa = PBXFileReference; name = "CDVGyroscope.m"; path = "cordova-plugin-gyroscope/CDVGyroscope.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1404F8DCE94B488B8E9D8F8F /* CDVGyroscope.h */ = {isa = PBXFileReference; name = "CDVGyroscope.h"; path = "cordova-plugin-gyroscope/CDVGyroscope.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		7018EA16E49A419CB363EFC9 /* CoreMotion.framework */ = {isa = PBXFileReference; name = "CoreMotion.framework"; path = "System/Library/Frameworks/CoreMotion.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				191ABE2622744654AD4CCC35 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +137,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7018EA16E49A419CB363EFC9 /* CoreMotion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,6 +163,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				E3B77B1B46984B518E5E1A3F /* CDVGyroscope.m */,
+				1404F8DCE94B488B8E9D8F8F /* CDVGyroscope.h */,
 			);
 			name = Plugins;
 			path = "WheelAlignment/Plugins";
@@ -270,6 +279,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				71A9645DD10B46178FC0105A /* CDVGyroscope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

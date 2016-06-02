@@ -4,16 +4,48 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Gyroscope\"><param name=\"ios-package\" value=\"CDVGyroscope\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.lemonswiki.WheelAlignment"
+        },
+        "cordova-plugin-gyroscope": {
+            "PACKAGE_NAME": "com.lemonswiki.WheelAlignment"
         }
     },
     "dependent_plugins": {},
-    "modules": [],
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-gyroscope/www/Orientation.js",
+            "id": "cordova-plugin-gyroscope.Orientation",
+            "pluginId": "cordova-plugin-gyroscope",
+            "clobbers": [
+                "Orientation"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-gyroscope/www/gyroscope.js",
+            "id": "cordova-plugin-gyroscope.gyroscope",
+            "pluginId": "cordova-plugin-gyroscope",
+            "clobbers": [
+                "navigator.gyroscope"
+            ]
+        }
+    ],
     "plugin_metadata": {
-        "cordova-plugin-whitelist": "1.2.2"
+        "cordova-plugin-whitelist": "1.2.2",
+        "cordova-plugin-gyroscope": "0.1.4"
     }
 }
