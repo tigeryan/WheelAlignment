@@ -37,23 +37,23 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
 
         window.ondeviceorientation = function(event) {
-            console.log( 'Alpha: ' + event.alpha );
-            console.log( 'Beta: ' + event.beta );
-            console.log( 'Gamma: ' + event.gamma );
+
+            //console.log( 'Alpha: ' + event.alpha  + ' Beta: ' + event.beta  +' Gamma: ' + event.gamma );
+            $("#alpha").html('alpha: ' + event.alpha);
+            $("#beta").html('beta: ' + event.beta);
+            $("#gamma").html('gamma: ' + event.gamma);
+            
         }
 
         window.addEventListener('devicemotion', function(event) {
-            console.log(event.acceleration.x + ' m/s2');
+            //console.log('acceleration xAxis: ' + event.acceleration.x + ' acceleration yAxis: ' + event.acceleration.y + ' acceleration zAxis: ' + event.acceleration.z)
+            $("#axisx").html('x axis: ' + event.acceleration.x);
+            $("#axisy").html('y axis: ' + event.acceleration.y);
+            $("#axisz").html('z axis: ' + event.acceleration.z);
         });
 
 
