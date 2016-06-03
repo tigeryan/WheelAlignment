@@ -46,8 +46,18 @@ var app = {
 
         console.log('Received Event: ' + id);
 
-        var gyroscope = navigator.gyroscope;
-        console.log(gyroscope.getCurrent);
+        window.ondeviceorientation = function(event) {
+            console.log( 'Alpha: ' + event.alpha );
+            console.log( 'Beta: ' + event.beta );
+            console.log( 'Gamma: ' + event.gamma );
+        }
+
+        window.addEventListener('devicemotion', function(event) {
+            console.log(event.acceleration.x + ' m/s2');
+        });
+
+
+
 
     }
 };
